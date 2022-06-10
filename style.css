@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+:root {
+  --primary-dark-gray: hsl(0, 0%, 63%);
+  --primary-black: hsl(0, 0%, 0%);
+  --primary-white: hsl(0, 0%, 100%);
+  --primary-very-dark-gray: hsl(0, 0%, 27%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "League Spartan", sans-serif;
+  line-height: 1.4;
+  color: var(--primary-black);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  padding: 0 16px;
+}
+
+a {
+  color: var(--primary-white);
+  text-decoration: none;
+  text-transform: lowercase;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+#header-container {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+}
+
+.preview {
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+  background-image: url(images/desktop-image-hero-1.jpg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-left: 60px;
+}
+
+.preview .main-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.preview .mobile-nav {
+  visibility: hidden;
+}
+
+.preview .mobile-nav-menu {
+  transform: translateY(-500%);
+}
+
+.main-nav .room-logo {
+  margin-top: 3px;
+  margin-right: 40px;
+}
+
+.main-nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item a {
+  padding-top: 0;
+  padding-bottom: 2px;
+}
+
+.nav-item:hover > .indicator {
+  visibility: visible;
+  animation-name: width-anim;
+  animation-duration: .1s;
+}
+
+.indicator {
+  width: 20px;
+  height: 2px;
+  visibility: hidden;
+  background-color: var(--primary-white);
+}
+
+.onboarding-container {
+  width: 40%;
+  padding-top: 90px;
+  position: relative;
+}
+
+.onboarding-container .header-text {
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.onboarding-container .summary-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--primary-dark-gray);
+  font-size: 13px;
+  padding-left: 70px;
+  padding-right: 112px;
+  text-align: start;
+  line-height: 1.7;
+}
+
+.btn {
+  border-collapse: collapse;
+  border: 0px;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  cursor: pointer;
+  font-weight: 600;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 10.5px;
+}
+
+.text-btn {
+  padding-left: 70px;
+  background-color: #fff;
+}
+
+.text-btn > img {
+  margin-left: 16px;
+}
+
+.text-btn:hover,
+.text-btn img:hover {
+  color: var(--primary-dark-gray);
+  transition: all 0.1s;
+}
+
+.nav-btn-container {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.nav-btn-container .icon-btn {
+  background-color: var(--primary-black);
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.shop-arrow-icon {
+  animation-name: shop-animation;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.shop-animation-bg {
+  animation-name: bg-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.icon-btn:hover {
+  background-color: var(--primary-very-dark-gray);
+}
+
+.icon-btn > img {
+  width: 12px;
+}
+
+.about {
+  display: flex;
+  height: 30vh;
+}
+
+.about .dark {
+  width: 32%;
+}
+
+.about .about-summary-container {
+  width: 39.2%;
+  padding: 20px 50px;
+}
+
+.about-summary-container .subtitle1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.about-summary-container .subtitle2 {
+  color: var(--primary-dark-gray);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.about .light {
+  width: 32%;
+}
+
+@keyframes width-anim {
+  0% { width: 5px; }
+  25% { width: 10px; }
+  50% { width: 15px; }
+  100% { width: 20px; }
+}
+
+@keyframes bg-animation {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes shop-animation {
+  0% {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  #header-container {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .preview {
+    width: 100%;
+    height: 350px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    background-image: url(images/mobile-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .preview .main-nav {
+    display: none;
+  }
+
+  .preview .mobile-nav {
+    display: flex;
+    visibility: visible;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobile-nav .logo-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .onboarding-container {
+    width: 100%;
+    height: unset;
+    padding: 40px 30px;
+    position: relative;
+  }
+
+  .onboarding-container .header-text,
+  .onboarding-container .summary-text {
+    padding: 0;
+  }
+
+  .text-btn {
+    padding: 0;
+  }
+
+  .mobile-nav .icon-btn {
+    background-color: transparent;
+  }
+
+  .mobile-nav .icon-btn .hamburger-icon {
+    width: 16px;
+  }
+
+  .mobile-overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .mobile-nav-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    background-color: var(--primary-white);
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-nav-menu .mobile-nav-items ul li {
+    padding: 0 10px;
+  }
+
+  .mobile-nav-menu .mobile-nav-items ul li:last-child {
+    padding-left: 10px;
+    padding-right: 0;
+  }
+
+  .mobile-nav-items a {
+    color: var(--primary-black);
+  }
+
+  .mobile-nav-menu .icon-btn {
+    background-color: transparent;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about .dark,
+  .about .about-summary-container,
+  .about .light {
+    width: 100%;
+  }
+
+  .onboarding-container .header-text {
+    font-size: 30px;
+  }
+
+  .onboarding-container .summary-text {
+    margin-top: 10px;
+  }
+
+  .onboarding-container .nav-btn-container {
+    position: absolute;
+    top: -60px;
+    right: 0;
+  }
+
+  .about .about-summary-container {
+    padding: 30px;
+  }
+
+  .mobile-menu-slide-in-anim {
+    animation-name: slide-in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .mobile-menu-slide-out-anim {
+    animation-name: slide-out;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  .hidden {
+      display: none;
+  }
+
+  .overflow {
+      overflow: hidden;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-100%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      transform: translateY(0%);
+    }
+
+    to {
+      transform: translateY(-100%);
+    }
+  }
+}

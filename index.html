@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Room homepage</title>
+  </head>
+  <body>
+    <main id="header-container">
+      <header class="preview">
+        <nav class="main-nav">
+          <div class="room-logo">
+            <img src="images/logo.svg" alt="" />
+          </div>
+
+          <ul>
+            <li>
+              <div class="nav-item">
+                <a href="#">Home</a>
+                <div class="indicator"></div>
+              </div>
+            </li>
+            <li>
+              <div class="nav-item">
+                <a href="#">Shop</a>
+                <div class="indicator"></div>
+              </div>
+            </li>
+            <li>
+              <div class="nav-item">
+                <a href="#">About</a>
+                <div class="indicator"></div>
+              </div>
+            </li>
+            <li>
+              <div class="nav-item">
+                <a href="#">Contact</a>
+                <div class="indicator"></div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="mobile-nav">
+          <button class="btn icon-btn open">
+            <img
+              src="images/icon-hamburger.svg"
+              alt=""
+              class="hamburger-icon"
+            />
+          </button>
+
+          <div class="logo-container">
+            <img src="images/logo.svg" alt="" />
+          </div>
+        </nav>
+
+        <div class="mobile-overlay hidden"></div>
+          <div class="mobile-nav-menu">
+            <button class="btn icon-btn close">
+              <img src="images/icon-close.svg" alt="" class="hamburger-icon" />
+            </button>
+  
+            <div class="mobile-nav-items">
+              <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">shop</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+              </ul>
+            </div>
+          </div>
+      </header>
+
+      <div class="onboarding-container">
+        <h3 class="header-text">Discover innovative ways to decorate</h3>
+        <p class="summary-text">
+          We provide unmatched quality, comfort, and style for property owners
+          across the country. Our experts combine form and function in bringing
+          your vision to life. Create a room in your own style with our
+          collection and make your property a reflection of you and what you
+          love.
+        </p>
+        <button class="btn text-btn">
+          Shop now
+          <img src="images/icon-arrow.svg" class="shop-arrow-icon" alt="" />
+        </button>
+
+        <div class="nav-btn-container">
+          <button class="btn icon-btn prev">
+            <img src="images/icon-angle-left.svg" alt="" />
+          </button>
+
+          <button class="btn icon-btn next">
+            <img src="images/icon-angle-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <section class="about">
+      <img src="images/image-about-dark.jpg" class="dark" alt="" />
+      <div class="about-summary-container">
+        <p class="subtitle1">About our furniture</p>
+        <p class="subtitle2">
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
+      </div>
+      <img src="images/image-about-light.jpg" class="light" alt="" />
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
