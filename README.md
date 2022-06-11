@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/responsive-landing-room-homepage-6GrV7T11kD)
+- Live Site URL: [Netlify](https://r00m-homepage.netlify.app/)
 
 ## My process
 
