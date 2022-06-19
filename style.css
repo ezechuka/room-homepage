@@ -187,7 +187,7 @@ a {
 
 .about {
   display: flex;
-  height: 30vh;
+  height: 30%;
 }
 
 .about .dark {
@@ -197,6 +197,9 @@ a {
 .about .about-summary-container {
   width: 39.2%;
   padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-summary-container .subtitle1 {
